@@ -1,0 +1,47 @@
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  border: 0;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.primary {
+  color: #FFFFFF;
+  background-color: #7653FC;
+}
+.primary:hover {
+  background-color: #6344df;
+}
+.primary svg {
+  fill: #FFFFFF;
+}
+
+.ghost {
+  color: #3B434E;
+  background: none;
+  border: 1px solid #EBEBEB;
+}
+.ghost:hover {
+  color: #FFFFFF;
+  background-color: #6344df;
+}
+.ghost:hover svg {
+  fill: #FFFFFF;
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.down {
+  transform: rotate(90deg);
+  transition: all 0.2s ease-in-out;
+}
+
+/*# sourceMappingURL=Button.module.css.map */

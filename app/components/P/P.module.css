@@ -1,0 +1,23 @@
+.default {
+  font-family: "Neo Sans", sans-serif;
+  color: #3B434E;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.small {
+  font-family: "Neo Sans", sans-serif;
+  color: #3B434E;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.large {
+  font-family: "Neo Sans", sans-serif;
+  font-weight: normal;
+  color: #3B434E;
+  font-size: 18px;
+  line-height: 29px;
+}
+
+/*# sourceMappingURL=P.module.css.map */
