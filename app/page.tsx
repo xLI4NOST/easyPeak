@@ -1,95 +1,51 @@
-import Image from "next/image";
+'use client'
+
 import styles from "./page.module.css";
+import {Htag} from "@/app/components/Htag/Htag";
+import {Button} from "@/app/components/Button/Button";
+import {P} from "@/app/components/P/P";
+import {Tag} from "@/app/components/Tag/Tag";
+import {Rating} from "@/app/components/Rating/Rating";
+import {useState} from "react";
+import {BlogCard} from "@/app/components/BlogCard/BlogCard";
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    const [rating, setRating] = useState<number>(4);
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    return (
+        <div className={styles.page}>
+            <main className={styles.main}>
+
+                <Htag tag='h1'>Текст</Htag>
+                <Button appearance={'primary'} arrow='right'>Кнокпка</Button>
+                <Button appearance={'ghost'} arrow='right'>Кнокпка</Button>
+
+                <P size={'l'}>большой</P>
+                <P>дефолт</P>
+                <P size={'s'}>мелкий</P>
+
+                <Tag size={'s'} color={'red'}>Маленький</Tag>
+                <Tag size={'m'} color={'ghost'}>Средний</Tag>
+                <Tag size={'m'} color={'primary'} href={'http://s'}>Primary</Tag>
+
+                <Rating rating={rating} isEditable={true} setRating={setRating}/>
+
+                <BlogCard
+                    image={'https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/sites/2147496605/images/adSKFRGlQnauNI2eNk5y_blog-CSSGrid.jpg'}
+                    href={'https://developer.mozilla.org/ru/docs/Web/CSS/CSS_grid_layout'}
+                    tag={'Front-end'}
+                    date={'1 месяц назад'}
+                    docsHref={'https://developer.mozilla.org/ru/docs/Web/CSS/CSS_grid_layout'}
+                    docsHrefText={'Грид-раскладка (CSS Grid Layout)'}
+                    title={'Как работать с CSS Grid'}
+                    description={'представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы..'}
+                    readTime={'3 минуты'}
+                />
+
+            </main>
+            <footer className={styles.footer}>
+
+            </footer>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    );
 }
