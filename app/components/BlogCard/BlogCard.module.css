@@ -27,7 +27,7 @@
 .mainInf h2 {
   font-weight: 700;
   font-size: 18px;
-  line-height: 100%;
+  line-height: 18px;
 }
 .mainInf p {
   font-weight: 400;
@@ -50,7 +50,7 @@
 .atributes p {
   font-weight: 400;
   font-size: 12px;
-  line-height: 100%;
+  line-height: 12px;
 }
 
 .href {

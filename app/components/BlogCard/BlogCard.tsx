@@ -1,6 +1,7 @@
 import s from './BlogCard.module.sass'
 import {BlogCardProps} from "@/app/components/BlogCard/BlogCard.props";
-import {JSX} from "react";
+import React from "react";
+import {BlogCardArrow} from "@/app/components/BlogCard/BlogCardArrow";
 
 export const BlogCard = ({
                              title,
@@ -13,7 +14,7 @@ export const BlogCard = ({
                              image,
                              date,
                              readTime
-                         }: BlogCardProps): JSX.Element => {
+                         }: BlogCardProps): React.ReactElement => {
     return (
         <div className={s.card}>
             <a href={href} className={s.imageBlock}>
@@ -37,18 +38,7 @@ export const BlogCard = ({
 
                 <a href={href}>
                     Читать
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff">
-                        <g stroke="#1473E6"
-                           strokeLinecap="round"
-                           strokeLinejoin="round"
-                           strokeWidth="1.3"
-                           clipPath="url(#a)"><path
-                            d="M4.2 10h11.6M12.5 13.3l3.3-3.3M12.5 6.7l3.3 3.3"/></g>
-                        <defs><clipPath id="a">
-                            <path d="M0 0h20v20H0z"/>
-                            </clipPath>
-                        </defs>
-                    </svg>
+                    <BlogCardArrow/>
                 </a>
             </span>
         </div>
