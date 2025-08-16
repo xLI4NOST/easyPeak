@@ -1,7 +1,8 @@
 import {HtagProps} from "@/app/components/Htag/Htag.props";
 import s from './Htag.module.sass'
+import React from "react";
 
-export const Htag = ({tag, children}: HtagProps): JSX.Element => {
+export const Htag = ({tag, children}: HtagProps): React.ReactElement => {
     switch (tag) {
         case "h1":
             return <h1 className={s.h1}>{children}</h1>;

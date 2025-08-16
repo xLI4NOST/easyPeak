@@ -1,8 +1,9 @@
 import {TagProps} from "@/app/components/Tag/Tag.props";
 import s from "./Tag.module.sass"
 import cn from "classnames";
+import React from "react";
 
-export const Tag = ({size, children, color, href, className, ...props}: TagProps): JSX.Element => {
+export const Tag = ({size, children, color, href, className, ...props}: TagProps): React.ReactElement => {
     return (
         <div className={cn(s.tag, className, {
             [s.medium]: size === 'm',

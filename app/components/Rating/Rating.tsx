@@ -2,7 +2,7 @@
 
 import s from './Rating.module.sass'
 import {RatingProps} from "@/app/components/Rating/Rating.props";
-import {JSX, KeyboardEvent, useEffect, useState} from "react";
+import React, {JSX, KeyboardEvent, useEffect, useState} from "react";
 import cn from "classnames";
 
 
@@ -13,7 +13,7 @@ export const Rating = ({
                            isEditable = false,
                            classname,
                            ...props
-                       }: RatingProps): JSX.Element => {
+                       }: RatingProps): React.ReactElement => {
 
 
     const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>))
@@ -32,7 +32,7 @@ export const Rating = ({
                     })}
                     onMouseEnter={() => changeDisplay(i + 1)}
                     onMouseLeave={() => changeDisplay(rating)}
-                    onClick={() => onClick(i + 1)}
+                    onClick={() => handleClickStar(i + 1)}
                 >
                     <svg
                         tabIndex={isEditable ? 0 : -1}
@@ -58,7 +58,7 @@ export const Rating = ({
         constructRating(i)
     }
 
-    const onClick = (i: number) => {
+    const handleClickStar = (i: number) => {
         if (!isEditable || !setRating) {
             return
         }
