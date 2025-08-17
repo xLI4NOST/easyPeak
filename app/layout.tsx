@@ -3,29 +3,29 @@ import {Noto_Sans, Open_Sans} from "next/font/google";
 import "./globals.css";
 
 const notoSans = Noto_Sans({
-    variable: "--font-noto-sans",
-    subsets: ["latin"]
+	variable: "--font-noto-sans",
+	subsets: ["latin"]
 })
 
 const openSans = Open_Sans({
-    variable: "--open-sans",
-    subsets: ["latin"]
+	variable: "--open-sans",
+	subsets: ["latin"]
 })
 
 export const metadata: Metadata = {
-    title: "EasyPeak",
+	title: "EasyPeak",
 };
 
 export default function RootLayout({
-                                       children,
+	                                   children,
                                    }: Readonly<{
-    children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-    return (
-        <html lang="ru">
-        <body className={`${notoSans.variable} ${openSans.variable}`}>
-        {children}
-        </body>
-        </html>
-    );
+	return (
+		<html lang="ru">
+		<body className={`${notoSans.variable} ${openSans.variable}`}>
+		{children}
+		</body>
+		</html>
+	);
 }
