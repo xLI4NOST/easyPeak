@@ -32,6 +32,7 @@ export const BlogCard = ({
 				<h2>{title}</h2>
 
 				<p><a href={docsHref}>{docsHrefText}</a>{description}</p>
+
 			</div>
 			<span className={styles.href}>
                 <p>{readTime}</p>
