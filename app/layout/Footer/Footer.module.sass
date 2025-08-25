@@ -1,0 +1,16 @@
+@use "../../variables" as *
+
+
+.footer
+  background-color: $primary
+  padding: 27px 32px
+  display: grid
+  grid-template-columns: 1fr auto auto
+  gap: 10px 40px
+
+  p
+    color: $white
+
+@media (max-width: 765px)
+  .footer
+    grid-template-columns: 1fr

@@ -1,0 +1,29 @@
+.blogHeader {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 30px 10px;
+  font-family: "Neo Sans", sans-serif;
+  font-size: 18px;
+}
+
+.blogHeaderNav ul {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  list-style: none;
+  gap: 10px 16px;
+}
+.blogHeaderNav ul li {
+  cursor: pointer;
+}
+
+@media (max-width: 765px) {
+  .blogHeaderNav ul {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+
+/*# sourceMappingURL=BlogHeader.module.css.map */

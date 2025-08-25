@@ -1,5 +1,4 @@
 .card {
-  max-width: 350px;
   padding: 10px;
   display: grid;
   gap: 16px;
@@ -22,7 +21,7 @@
 
 .mainInf {
   display: grid;
-  gap: 5px;
+  gap: 10px;
 }
 .mainInf h2 {
   font-weight: 700;
@@ -36,11 +35,13 @@
   line-height: 21px;
 }
 .mainInf p a {
+  color: #6E6E6E;
   text-decoration: underline;
 }
 
 .atributes {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto 1fr;
   align-items: center;
   gap: 5px;
 }
@@ -67,6 +68,15 @@
   align-items: center;
   justify-content: flex-end;
   color: #1473E6;
+}
+
+@media (max-width: 765px) {
+  .card {
+    max-width: 100%;
+  }
+  .imageBlock {
+    padding: 0;
+  }
 }
 
 /*# sourceMappingURL=BlogCard.module.css.map */
