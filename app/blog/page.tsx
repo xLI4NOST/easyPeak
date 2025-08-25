@@ -4,7 +4,7 @@ import styles from "./Blog.module.sass"
 import {format} from "date-fns";
 import {BlogCardProps} from "@/app/components/BlogCard/BlogCard.props";
 
-const Page = () => {
+const BlogPage = () => {
     const cards: BlogCardProps[] = [
         {
             docsHref: 'https://github.com/xLI4NOST/easyPeak/pulls',
@@ -77,4 +77,4 @@ const Page = () => {
     );
 };
 
-export default Page;
+export default BlogPage;
