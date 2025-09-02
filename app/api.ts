@@ -8,6 +8,9 @@ export const API = {
     },
     review: {
         createDemo: process.env.NEXT_PUBLIC_DOMAIN + '/api/review/create-demo',
+    },
+    posts: {
+        find: process.env.JSON_PLACEHOLDER + '/posts/1/comments',
     }
 }
 

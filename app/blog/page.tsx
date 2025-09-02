@@ -1,10 +1,13 @@
+'use server'
+
 import React from 'react';
 import {BlogCard} from "@/app/components/BlogCard/BlogCard";
 import styles from "./Blog.module.sass"
 import {format} from "date-fns";
-import {BlogCardProps} from "@/app/components/BlogCard/BlogCard.props";
+import {BlogCardProps, BlogPostsProps} from "@/app/components/BlogCard/BlogCard.props";
+import {getPosts} from "@/api/posts";
 
-const BlogPage = () => {
+const BlogPage = async () => {
     const cards: BlogCardProps[] = [
         {
             docsHref: 'https://github.com/xLI4NOST/easyPeak/pulls',
@@ -56,20 +59,23 @@ const BlogPage = () => {
         }
     ]
 
+    const posts: BlogPostsProps = await getPosts()
 
+
+    console.log(posts)
     return (
         <div className={styles.cardWrapper}>
-            {cards.map((item, id) => (
+            {posts.map((item, id) => (
                 <BlogCard
-                    key={id}
+                    key={item.id}
                     docsHref={item.docsHref}
                     docsHrefText={item.docsHrefText}
-                    tag={item.tag}
+                    tag={item.postId}
                     date={item.date}
-                    image={item.image}
+                    image={'https://habrastorage.org/r/w1560/getpro/habr/upload_files/da0/b0d/2cc/da0b0d2ccd24fe7ab50820c2803d3f9d.jpg'}
                     href={item.href}
-                    title={item.title}
-                    description={item.description}
+                    title={item.name}
+                    description={item.body}
                     readTime={item.readTime}
                 />
             ))}

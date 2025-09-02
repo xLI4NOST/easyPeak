@@ -1,6 +1,6 @@
 'use server'
 
-import React from "react";
+import React, {JSXElementConstructor, ReactElement} from "react";
 import {Htag} from "@/app/components/Htag/Htag";
 import {Button} from "@/app/components/Button/Button";
 import {P} from "@/app/components/P/P";
@@ -9,7 +9,7 @@ import {Rating} from "@/app/components/Rating/Rating";
 import {BlogCard} from "@/app/components/BlogCard/BlogCard";
 import Menu from "@/app/components/menu/Menu";
 
-export default async function Home(): React.ReactElement {
+export default async function Home(): Promise<ReactElement<unknown, string | JSXElementConstructor<any>>> {
 
     return (
         <>

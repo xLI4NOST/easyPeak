@@ -1,6 +1,6 @@
 import {API} from "@/app/api";
 
-export async function getMenu(firstCategory: number): Promise<[]> {
+export const getMenu = async (firstCategory: number): Promise<[]> => {
 
     const res = await fetch(API.topPage.find, {
         method: "POST",

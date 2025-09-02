@@ -10,7 +10,7 @@ export const Rating = ({
                            children,
                            rating,
                            isEditable = false,
-                           classname,
+                           className,
                            ...props
                        }: RatingProps): React.ReactElement => {
 
@@ -21,7 +21,7 @@ export const Rating = ({
         constructRating(isRating)
     }, [isRating])
 
-    const constructRating = (currentRating: number) => {
+    const constructRating = (currentRating: number | undefined) => {
         const updatedArray = ratingArray.map((r: JSX.Element, i: number) => {
             return (
                 <span

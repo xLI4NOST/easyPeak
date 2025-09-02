@@ -8,11 +8,11 @@ export const metadata: Metadata = {
 }
 
 export async function generateStaticParams() {
-    const menu = await getMenu(0);
+    const menu = await getMenu(1);
     return menu.flatMap(item => item.pages.map(page => ({alias: page.alias})))
 }
 
-const PageProducts = async ({params}: { params: { alias: string } }) => {
+const PageProducts = async ({params}: { params: Promise<{ alias: string }> }) => {
     const page = await getPage(params.alias);
     console.log(page)
     // if (!page) {
