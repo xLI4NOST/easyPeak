@@ -8,76 +8,38 @@ import {getMenu} from "@/api/Menu";
 import {P} from "@/app/components/P/P";
 import styles from "./Menu.module.sass"
 
-const data: MenuItem<MenuItemChild[]>[] = [
-    {
-        route: 'courses',
-        name: 'Курсы',
-        icon: <CoursesIcon/>,
-        id: 1,
-        children: [
-            {
-                name: 'Дизайн',
-                route: 'design'
-            },
-
-            {
-                name: 'Разработка',
-                route: 'development'
-            },
-            {
-                name: 'Аналитика',
-                route: 'analytics'
-            },
-            {
-                name: 'Маркетинг',
-                route: 'marketing'
-            }
-
-
-        ],
-
-
-    },
-    {
-        route: 'services',
-        name: 'Сервисы',
-        icon: <ServicesIcon/>,
-        id: 1
-    },
-    {
-        route: 'books',
-        name: 'Книги',
-        icon: <BooksIcon/>,
-        id: 1
-    },
-    {
-        route: 'products',
-        name: 'Продукты',
-        icon: <ProductsIcon/>,
-        id: 1
-    },
-]
-
 export const ListComponent = ({item}) => {
-    const isEmpty = item.pages.length === 0
-    console.log(isEmpty)
+
     return <div className={styles.container}>
-        <a href={'#'}>{item._id.secondCategory}</a>
-        {/*{!isEmpty && <ListTree data={item.pages}/>}*/}
+        <a href={'#'}>{item._id.secondCategory || item.title}</a>
+        {/*<div className={styles.hrefContainer}>*/}
+        {/*    {item.pages.map((item) => (*/}
+        {/*        <div>{item.title} </div>*/}
+        {/*    ))}*/}
+        {/*</div>*/}
+        {<ListTree data={item.pages}/>}
     </div>
 }
 
 export const ListTree = async ({data}) => {
     console.log(data)
-    return <div>
-        {data.map((item, id) => (
-            <ListComponent item={item} key={item._id.secondCategory ? item._id.secondCategory : item._id}/>
-        ))}
-    </div>
+
+    if (data) {
+        return <div>
+            {data.map((item, id) => (
+                <ListComponent key={item._id.secondCategory || item._id} item={item}/>
+            ))}
+        </div>
+    } else {
+        return null
+    }
+
+
 }
 
 export const Menu = async (): Promise<ReactElement> => {
     const courses = await getMenu(0);
+    console.log(courses)
     return <div>
         <div className={styles.category}>
             <CoursesIcon/>
