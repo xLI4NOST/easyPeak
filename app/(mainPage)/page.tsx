@@ -8,12 +8,13 @@ import {Tag} from "@/app/components/Tag/Tag";
 import {Rating} from "@/app/components/Rating/Rating";
 import {BlogCard} from "@/app/components/BlogCard/BlogCard";
 import Menu from "@/app/components/menu/Menu";
+import {getCourses} from "@/api/courses";
+import {getMenu} from "@/api/Menu";
 
 export default async function Home(): Promise<ReactElement<unknown, string | JSXElementConstructor<any>>> {
 
     return (
         <>
-
             <Htag tag='h1'>Текст</Htag>
             <Button appearance={'primary'} arrow='right'>Кнокпка</Button>
             <Button appearance={'ghost'} arrow='right'>Кнокпка</Button>
@@ -21,7 +22,6 @@ export default async function Home(): Promise<ReactElement<unknown, string | JSX
             <P size={'l'}>большой</P>
             <P>дефолт</P>
             <P size={'s'}>мелкий</P>
-            <Menu/>
             <Tag size={'s'} color={'red'}>Маленький</Tag>
             <Tag size={'m'} color={'ghost'}>Средний</Tag>
             <Tag size={'m'} color={'primary'} href={'http://s'}>Primary</Tag>

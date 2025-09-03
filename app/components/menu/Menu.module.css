@@ -1,0 +1,13 @@
+.category {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: start;
+  padding-top: 20px;
+}
+
+.container {
+  display: flex;
+}
+
+/*# sourceMappingURL=Menu.module.css.map */
