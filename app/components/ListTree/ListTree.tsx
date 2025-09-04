@@ -3,13 +3,13 @@
 import React from "react";
 import {List} from '../../components/List/List'
 import {ListTreeProps} from "@/app/components/ListTree/listTree.props";
-import {ListProps} from "@/app/components/List/list.props";
+import styles from './listTree.module.sass'
 
 
 export const ListTree = ({data}: ListTreeProps): React.ReactElement => {
 
     if (data) {
-        return <div>
+        return <div className={styles.category_container}>
             {data.map((item, id) => (
 
                 <List _id={item._id}

@@ -1,9 +1,7 @@
-.category {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  align-items: start;
-  padding-top: 20px;
+.category_container {
+  padding-left: 20px;
+  margin-left: 10px;
+  border-left: 1px solid #DFDFDF;
 }
 
 .container {
