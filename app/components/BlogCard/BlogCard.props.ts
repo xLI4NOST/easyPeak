@@ -10,6 +10,7 @@ export interface BlogCardProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivE
     title: string;
     description: string;
     readTime: string;
+    searchParam: number;
 }
 
 export interface BlogPostsProps {

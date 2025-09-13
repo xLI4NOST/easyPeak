@@ -13,6 +13,8 @@ export async function generateStaticParams() {
 }
 
 const PageProducts = async ({params}: { params: Promise<{ alias: string }> }) => {
+    await new Promise(resolve => setTimeout(resolve, 3000));
+
     const page = await getPage(params.alias);
     if (!page) {
         return null
@@ -20,8 +22,10 @@ const PageProducts = async ({params}: { params: Promise<{ alias: string }> }) =>
 
     return (
         <div>
+            adsad
         </div>
     );
 };
+
 
 export default PageProducts;

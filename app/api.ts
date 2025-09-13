@@ -11,6 +11,7 @@ export const API = {
     },
     posts: {
         find: process.env.JSON_PLACEHOLDER + '/posts/1/comments',
+        byAlias: process.env.JSON_PLACEHOLDER + '/posts/'
     }
 }
 

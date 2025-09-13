@@ -6,13 +6,10 @@ export default function BlogLayout({children}: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="ru">
-        <body>
         <div className={styles.blogLayout}>
             <BlogHeader/>
             {children}
         </div>
-        </body>
-        </html>
+
     );
 }

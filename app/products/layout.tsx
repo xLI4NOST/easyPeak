@@ -1,12 +1,7 @@
-export default function RootLayout({children,}: Readonly<{
-    children: React.ReactNode;
-}>) {
-    return (
-        <html lang="ru">
-        <body>
+import React from "react";
 
-        {children}
-        </body>
-        </html>
+export default function ProductsLayout({children,}: { children?: React.ReactNode }) {
+    return (
+        children
     );
 }
