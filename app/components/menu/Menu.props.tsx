@@ -1,6 +1,5 @@
 import React from "react";
 
-
 export interface MenuItemChild {
     name: string;
     route: string;

@@ -4,7 +4,7 @@ import {getMenu} from "@/api/Menu";
 import Menu from "@/app/components/menu/Menu";
 
 
-export const SideBar = async ({className}: SideBarProps): React.ReactElement => {
+export const SideBar = async ({className}: SideBarProps) => {
 
 
     return <div className={className}>

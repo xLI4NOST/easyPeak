@@ -14,10 +14,9 @@ export async function generateStaticParams() {
 
 const PageProducts = async ({params}: { params: Promise<{ alias: string }> }) => {
     const page = await getPage(params.alias);
-    console.log(page)
-    // if (!page) {
-    //     notFound()
-    // }
+    if (!page) {
+        return null
+    }
 
     return (
         <div>
