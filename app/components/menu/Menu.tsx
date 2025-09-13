@@ -15,7 +15,6 @@ export const Menu = async (): Promise<ReactElement> => {
         <Category data={''} name={'Сервисы'} children={<ServicesIcon/>}/>
         <Category data={courses} name={'Книги'} children={<BooksIcon/>}/>
         <Category data={courses} name={'Товары'} children={<ProductsIcon/>}/>
-
     </div>
 };
 
