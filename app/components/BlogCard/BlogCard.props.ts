@@ -11,3 +11,12 @@ export interface BlogCardProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivE
     description: string;
     readTime: string;
 }
+
+export interface BlogPostsProps {
+    postId: number,
+    id: number,
+    name: string,
+    email: string,
+    body: string,
+
+}

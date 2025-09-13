@@ -2,7 +2,7 @@ import {BlogHeader} from "@/app/components/BlogHeader/BlogHeader";
 import styles from "./Blog.module.sass"
 import "./reset.css"
 
-export default function RootLayout({children,}: Readonly<{
+export default function BlogLayout({children}: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
