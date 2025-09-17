@@ -5,6 +5,7 @@
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   gap: 0 30px;
+  background-color: #EBEBEB;
 }
 
 .header {
@@ -26,6 +27,7 @@
 }
 
 .body {
+  padding-top: 40px;
   grid-area: body;
 }
 
