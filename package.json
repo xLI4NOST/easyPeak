@@ -9,6 +9,7 @@
     "lint": "stylelint\"**/*.sass\" --fix"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.9.0",
     "antd": "^5.27.0",
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",

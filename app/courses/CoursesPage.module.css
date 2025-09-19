@@ -6,14 +6,6 @@
   border-radius: 10px;
 }
 
-.coursesTitle {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 10px;
-}
-
 .coursesPage_buttons {
   display: flex;
   flex-direction: row;

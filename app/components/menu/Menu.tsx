@@ -10,7 +10,7 @@ import styles from "./Menu.module.sass"
 
 export const Menu = async (): Promise<ReactElement> => {
     const courses = await getMenu(0);
-
+    console.log(courses)
     return <div className={styles.menu}>
         <Category data={courses} name={'Курсы'} children={<CoursesIcon/>}/>
         <Category data={''} name={'Сервисы'} children={<ServicesIcon/>}/>

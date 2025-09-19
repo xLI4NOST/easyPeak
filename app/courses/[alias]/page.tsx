@@ -9,17 +9,13 @@ import {Button} from "@/app/components/Button/Button";
 import Vacancies from "@/app/components/Vacancies/Vacancies";
 import Advantages from "@/app/components/Advantages/Advantages";
 import AcquariedSkills from "@/app/components/AcquariedSkills/AcquariedSkills";
+import CoursesTitle from "@/app/components/CoursesTitle/CoursesTitle";
 
 
 const Page = (data: CourseProps): React.ReactElement => {
-
-
     return (
         <>
-            <div className={styles.coursesTitle}>
-                <Htag tag={'h1'}>Курсы по Photoshop</Htag>
-                <Tag size={'m'} color={'gray'}>10</Tag>
-            </div>
+            <CoursesTitle/>
             <div className={styles.coursesPage}>
                 <ProfessionCard/>
                 <ProfessionDescription/>
