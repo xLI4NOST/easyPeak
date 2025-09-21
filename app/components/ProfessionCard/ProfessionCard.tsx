@@ -8,14 +8,14 @@ import {ProfessionCardProps} from "@/app/components/ProfessionCard/ProfessionCar
 import React from "react";
 
 
-function ProfessionCard({title, rating, tags, price}: ProfessionCardProps): React.ReactElement {
+function ProfessionCard({profession}: { profession: string }): React.ReactElement {
     const url = 'https://static.tildacdn.com/tild6663-3461-4439-b432-656365316262/Facebook_post_-_2.png'
 
     return <div className={styles.professionCard}>
         <div className={styles.professionCard_head}>
             <img src={url} alt={'head'}/>
             <div className={styles.professionCard_head_name}>
-                <Htag tag={'h2'}>Профессия дизайнер от 0 до PRO</Htag>
+                <Htag tag={'h2'}>{profession}</Htag>
                 <Cup/>
                 <div className={styles.professionCard_head_name_tags}>
                     <Tag size={'m'} color={'ghost'}><P>Photoshop</P></Tag>

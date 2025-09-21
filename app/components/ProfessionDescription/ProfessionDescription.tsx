@@ -4,12 +4,10 @@ import {Htag} from "@/app/components/Htag/Htag";
 import {Tag} from "@/app/components/Tag/Tag";
 
 
-function ProfessionDescription() {
+function ProfessionDescription({description}: { description: string }) {
 
     return <div className={styles.professionDescription}>
-        <P>Студенты освоят не только hard skills, необходимые для работы веб-дизайнером, но и soft skills — навыки,
-            которые позволят эффективно взаимодействовать в команде с менеджерами, разработчиками и маркетологами.
-            Выпускники факультета могут успешно конкурировать с веб-дизайнерами уровня middle.</P>
+        <P>{description}</P>
         <div className={styles.professionDescription_info}>
             <div className={styles.professionDescription_info_prerogatives}>
                 <div className={styles.professionDescription_info_prerogatives_prepogative}>

@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "stylelint\"**/*.sass\" --fix"
+    "lint": "stylelint\"**/*.sass\" --fix",
+    "server": "json-server -w server/db.json -p 3001"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.9.0",
@@ -29,6 +30,7 @@
     "@typescript-eslint/parser": "^8.39.0",
     "eslint": "^9.32.0",
     "eslint-config-next": "15.4.6",
+    "json-server": "^1.0.0-beta.3",
     "stylelint": "^16.23.1",
     "stylelint-config-clean-order": "^7.0.0",
     "stylelint-config-standard": "^39.0.0",

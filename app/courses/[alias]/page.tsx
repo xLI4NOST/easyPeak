@@ -10,15 +10,20 @@ import Vacancies from "@/app/components/Vacancies/Vacancies";
 import Advantages from "@/app/components/Advantages/Advantages";
 import AcquariedSkills from "@/app/components/AcquariedSkills/AcquariedSkills";
 import CoursesTitle from "@/app/components/CoursesTitle/CoursesTitle";
+import {getCourseByAlias} from "@/api/courses";
 
 
-const Page = (data: CourseProps): React.ReactElement => {
+const Page = async ({params}): React.ReactElement => {
+    const {alias} = await params
+    const course = await getCourseByAlias(alias)
+    console.log(course)
+
     return (
         <>
-            <CoursesTitle/>
+            <CoursesTitle title={course.title}/>
             <div className={styles.coursesPage}>
-                <ProfessionCard/>
-                <ProfessionDescription/>
+                <ProfessionCard profession={course.profession}/>
+                <ProfessionDescription description={course.desc}/>
                 <div className={styles.coursesPage_buttons}>
                     <Button appearance={"primary"}>Узнать подробнее</Button>
                     <Button appearance={"ghost"} arrow={'right'}>Читать отзывы</Button>

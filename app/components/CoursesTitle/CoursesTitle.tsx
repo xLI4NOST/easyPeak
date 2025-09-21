@@ -6,10 +6,10 @@ import {CoursesRating} from "@/app/components/CoursesTitle/icons/CoursesRating";
 import {P} from "@/app/components/P/P";
 
 
-function CoursesTitle() {
+function CoursesTitle({title}: { title?: string }) {
     return <div className={styles.coursesTitle}>
         <div className={styles.coursesTitle_description}>
-            <Htag tag={'h1'}>Курсы по Photoshop</Htag>
+            <Htag tag={'h1'}>{title}</Htag>
             <Tag size={'m'} color={'gray'}>10</Tag>
         </div>
         <div className={styles.coursesTitle_sort}>
