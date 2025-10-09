@@ -1,0 +1,17 @@
+.blogPost {
+  max-width: 687px;
+}
+.blogPost h1 {
+  font-weight: 700;
+}
+
+.blogPost_image {
+  max-width: 100%;
+  padding: 20px 0;
+}
+
+.blogPostDescription {
+  color: #3B434E;
+}
+
+/*# sourceMappingURL=BlogPost.module.css.map */

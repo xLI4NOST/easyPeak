@@ -1,0 +1,73 @@
+{
+  "courses": [
+    {
+      "_id": {
+        "secondCategory": "Дизайн"
+      },
+      "pages": [
+        {
+          "alias": "Photoshop",
+          "title": "Photoshop",
+          "_id": "61dc4da6bb018480524c112c",
+          "category": "Photoshop"
+        },
+        {
+          "alias": "Figma",
+          "title": "Figma",
+          "_id": "61b910e2f73c5eb5542c9d68",
+          "category": "Figma"
+        },
+        {
+          "alias": "AfterEffect",
+          "title": "AfterEffect",
+          "_id": "61ba6e21f73c5e512b2e01f8",
+          "category": "AfterEffect"
+        }
+      ]
+    },
+    {
+      "_id": {
+        "secondCategory": "Разработка"
+      },
+      "pages": [
+        {
+          "alias": "Js-developer",
+          "title": "developer",
+          "_id": "6068cc76d084b85d3f1abf56",
+          "category": "JS Разработчик"
+        }
+      ]
+    },
+    {
+      "_id": {
+        "secondCategory": "Аналитика"
+      },
+      "pages": [
+        {
+          "alias": "financial-analytics",
+          "title": "Курсы по финансовой аналитике",
+          "_id": "61055589468b5529b92acf77",
+          "category": "Финансовая аналитика"
+        }
+      ]
+    },
+    {
+      "_id": {
+        "secondCategory": "Маркетинг"
+      },
+      "pages": [
+        {
+          "alias": "Seo",
+          "title": "Курсы SEO",
+          "_id": "60662f5a28780843dda47ada",
+          "category": "Seo"
+        }
+      ]
+    }
+  ],
+  "course": {
+    "title": "Курсы по Photoshop",
+    "profession": "Профессия дизайнер от 0 до PRO",
+    "desc": "Студенты освоят не только hard skills, необходимые для работы веб-дизайнером, но и soft skills — навыки, которые позволят эффективно взаимодействовать в команде с менеджерами, разработчиками и маркетологами. Выпускники факультета могут успешно конкурировать с веб-дизайнерами уровня middle."
+  }
+}

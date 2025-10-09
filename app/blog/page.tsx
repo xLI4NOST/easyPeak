@@ -6,6 +6,7 @@ import styles from "./Blog.module.sass"
 import {format} from "date-fns";
 import {BlogCardProps, BlogPostsProps} from "@/app/components/BlogCard/BlogCard.props";
 import {getPosts} from "@/api/posts";
+import Link from "next/link";
 
 
 const BlogPage = async (Component) => {
@@ -14,7 +15,7 @@ const BlogPage = async (Component) => {
 
     return (
         <div className={styles.cardWrapper}>
-            {posts.map((item, id) => (
+            {posts.map((item) => (
                 <BlogCard
                     key={item.id}
                     docsHref={item.docsHref}
@@ -26,7 +27,9 @@ const BlogPage = async (Component) => {
                     title={item.name}
                     description={item.body}
                     readTime={item.readTime}
+                    searchParam={item.id}
                 />
+
             ))}
         </div>
     );

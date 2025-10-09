@@ -5,13 +5,16 @@ import {ProductsIcon} from "@/app/components/menu/icons/ProductsIcon";
 import {ServicesIcon} from "@/app/components/menu/icons/ServicesIcon";
 import {getMenu} from "@/api/Menu";
 import {Category} from "@/app/components/Category/Category";
+import styles from "./Menu.module.sass"
+import {getMenuList} from "@/api/courses";
 
 
 export const Menu = async (): Promise<ReactElement> => {
     const courses = await getMenu(0);
-
-    return <div>
-        <Category data={courses} name={'Курсы'} children={<CoursesIcon/>}/>
+    const menu = await getMenuList();
+    console.log(courses)
+    return <div className={styles.menu}>
+        <Category data={menu} name={'Курсы'} children={<CoursesIcon/>}/>
         <Category data={''} name={'Сервисы'} children={<ServicesIcon/>}/>
         <Category data={courses} name={'Книги'} children={<BooksIcon/>}/>
         <Category data={courses} name={'Товары'} children={<ProductsIcon/>}/>
