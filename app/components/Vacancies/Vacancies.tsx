@@ -5,8 +5,6 @@ import {Rating} from "@/app/components/Rating/Rating";
 
 
 function Vacancies() {
-
-
     return <div className={styles.vacancies}>
         <div className={styles.vacancies_card}>
             <P>Всего вакансий</P>
