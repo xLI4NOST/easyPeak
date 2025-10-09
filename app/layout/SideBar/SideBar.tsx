@@ -6,8 +6,6 @@ import {Logo} from "@/app/layout/icons/Logo";
 
 
 export const SideBar = async ({className}: SideBarProps) => {
-
-
     return <div className={className}>
         <Logo/>
         <div>Поиск</div>

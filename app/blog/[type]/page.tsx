@@ -9,7 +9,7 @@ export default async function BlogPost({params}): Promise<React.ReactElement> {
     const {type} = await params
     const post: BlogPostsProps = await getPost(1)
     const imageUrl = 'https://habrastorage.org/r/w1560/getpro/habr/upload_files/da0/b0d/2cc/da0b0d2ccd24fe7ab50820c2803d3f9d.jpg'
-    console.log(post)
+
     return <div className={styles.blogPost}>
         <Htag tag={'h1'}>{post.title}</Htag>
         <P>Front-end · 1 месяц назад · 3 минуты ·</P>

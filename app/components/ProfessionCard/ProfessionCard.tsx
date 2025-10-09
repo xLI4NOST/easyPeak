@@ -4,7 +4,6 @@ import {Tag} from "@/app/components/Tag/Tag";
 import {P} from "@/app/components/P/P";
 import {Cup} from "@/app/components/ProfessionCard/icons/Cup";
 import {Rating} from "@/app/components/Rating/Rating";
-import {ProfessionCardProps} from "@/app/components/ProfessionCard/ProfessionCard.props";
 import React from "react";
 
 

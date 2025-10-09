@@ -16,8 +16,7 @@ import {getCourseByAlias} from "@/api/courses";
 const Page = async ({params}): React.ReactElement => {
     const {alias} = await params
     const course = await getCourseByAlias(alias)
-    console.log(course)
-
+    
     return (
         <>
             <CoursesTitle title={course.title}/>
