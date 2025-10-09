@@ -1,15 +1,15 @@
 'use server'
 
 import React, {JSXElementConstructor, ReactElement} from "react";
-import {Htag} from "@/app/components/Htag/Htag";
-import {Button} from "@/app/components/Button/Button";
-import {P} from "@/app/components/P/P";
-import {Tag} from "@/app/components/Tag/Tag";
-import {Rating} from "@/app/components/Rating/Rating";
-import {BlogCard} from "@/app/components/BlogCard/BlogCard";
-import Menu from "@/app/components/menu/Menu";
-import {getCourses} from "@/api/courses";
-import {getMenu} from "@/api/Menu";
+import {Htag} from "@/app/shared/ui/Htag/Htag";
+import {Button} from "@/app/shared/ui/Button/Button";
+import {P} from "@/app/shared/ui/P/P";
+import {Tag} from "@/app/shared/ui/Tag/Tag";
+import {Rating} from "@/app/shared/ui/Rating/Rating";
+import {BlogCard} from "@/app/features/Blog/ui/BlogCard/BlogCard";
+import Menu from "@/app/widgetes/SideBar/Menu/Menu";
+import {getCourses} from "@/app/shared/api/courses";
+import {getMenu} from "@/app/shared/api/Menu";
 
 export default async function Home(): Promise<ReactElement<unknown, string | JSXElementConstructor<any>>> {
 

@@ -1,0 +1,47 @@
+@use "../../../../variables" as *
+
+.professionDescription
+  display: grid
+  gap: 24px
+  padding: 17px 0
+  border-top: 1px solid $gray-light
+  border-bottom: 1px solid $gray-light
+
+.professionDescription_info
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 0 60px
+  padding: 0 30px
+
+.professionDescription_info_prerogatives
+  display: grid
+  gap: 5px
+
+.professionDescription_info_prerogatives_prepogative
+  display: grid
+  grid-template-columns: auto 1fr auto
+  justify-content: center
+  align-items: center
+  gap: 0 10px
+
+  span
+    transform: translateY(5px)
+    border-bottom: 2px dotted gray
+
+.professionDescription_info_prerogatives_prepogative_tag
+  margin-top: 10px
+  max-width: 220px
+  padding: 0 10px
+  white-space: nowrap
+  text-align: center
+
+.professionDescription_info_advantages
+  display: grid
+  gap: 20px 0
+
+.professionDescription_info_advantages_advantage
+  padding-left: 10px
+  border-left: 3px solid $green
+
+.professionDescription_info_advantages_advantage:nth-child(2)
+  border-left: 3px solid $red

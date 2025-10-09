@@ -1,9 +1,9 @@
-import {BlogPostsProps} from "@/app/components/BlogCard/BlogCard.props";
-import {getPost} from "@/api/posts";
+import {BlogPostsProps} from "@/app/features/Blog/ui/BlogCard/BlogCard.props";
+import {getPost} from "@/app/shared/api/posts";
 import styles from "./BlogPost.module.sass"
 import React from "react";
-import {P} from "@/app/components/P/P";
-import {Htag} from "@/app/components/Htag/Htag";
+import {P} from "@/app/shared/ui/P/P";
+import {Htag} from "@/app/shared/ui/Htag/Htag";
 
 export default async function BlogPost({params}): Promise<React.ReactElement> {
     const {type} = await params

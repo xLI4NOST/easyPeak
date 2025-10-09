@@ -1,4 +1,4 @@
-import {BlogHeader} from "@/app/components/BlogHeader/BlogHeader";
+import {BlogHeader} from "@/app/widgetes/BlogHeader/BlogHeader";
 import styles from "./Blog.module.sass"
 import "./reset.css"
 
