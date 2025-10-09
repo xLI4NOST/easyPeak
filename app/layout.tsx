@@ -2,9 +2,9 @@ import type {Metadata} from "next";
 import {Noto_Sans, Open_Sans} from "next/font/google";
 import "./globals.css";
 import styles from "@/app/(mainPage)/mainPage.module.sass";
-import Header from "@/app/layout/Header/Header";
-import SideBar from "@/app/layout/SideBar/SideBar";
-import Footer from "@/app/layout/Footer/Footer";
+import Header from "@/app/widgetes/Header/Header";
+import SideBar from "@/app/widgetes/SideBar/SideBar";
+import Footer from "@/app/widgetes/Footer/Footer";
 import React from "react";
 
 const notoSans = Noto_Sans({

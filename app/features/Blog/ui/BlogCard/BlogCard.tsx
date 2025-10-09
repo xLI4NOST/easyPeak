@@ -1,0 +1,52 @@
+import styles from './BlogCard.module.sass'
+import {BlogCardProps} from "@/app/features/Blog/ui/BlogCard/BlogCard.props";
+import React from "react";
+import {BlogCardArrow} from "@/app/features/Blog/ui/BlogCard/BlogCardArrow";
+import Link from "next/link";
+
+export const BlogCard = ({
+                             title,
+                             description,
+                             href,
+                             docsHref,
+                             docsHrefText,
+                             className,
+                             tag,
+                             image,
+                             date,
+                             readTime,
+                             searchParam
+                         }: BlogCardProps): React.ReactElement => {
+    return (
+        <div className={styles.card}>
+            <a href={href} className={styles.imageBlock}>
+                <img className={styles.image} src={image} alt={title}/>
+            </a>
+
+
+            <div className={styles.mainInf}>
+                <div className={styles.atributes}>
+                    <p className={styles.date}>{tag}</p>
+                    ·
+                    <p>{date}</p>
+                </div>
+
+                <h2>{title}</h2>
+
+                <p><a href={docsHref}>{docsHrefText}</a>{description}</p>
+
+            </div>
+            <span className={styles.href}>
+                <p>{readTime}</p>
+
+                <Link href={`/blog/${searchParam}`
+                }
+                >
+                    Читать
+                    <BlogCardArrow/>
+                </Link>
+            </span>
+        </div>
+    )
+}
+

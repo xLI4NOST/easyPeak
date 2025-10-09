@@ -1,7 +1,7 @@
 import React from 'react';
 import {Metadata} from "next";
-import {getPage} from "@/api/page";
-import {getMenu} from "@/api/Menu";
+import {getPage} from "@/app/shared/api/page";
+import {getMenu} from "@/app/shared/api/Menu";
 
 export const metadata: Metadata = {
     title: "Страница",

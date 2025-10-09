@@ -1,11 +1,11 @@
 'use server'
 
 import React from 'react';
-import {BlogCard} from "@/app/components/BlogCard/BlogCard";
+import {BlogCard} from "@/app/features/Blog/ui/BlogCard/BlogCard";
 import styles from "./Blog.module.sass"
 import {format} from "date-fns";
-import {BlogCardProps, BlogPostsProps} from "@/app/components/BlogCard/BlogCard.props";
-import {getPosts} from "@/api/posts";
+import {BlogCardProps, BlogPostsProps} from "@/app/features/Blog/ui/BlogCard/BlogCard.props";
+import {getPosts} from "@/app/shared/api/posts";
 import Link from "next/link";
 
 
